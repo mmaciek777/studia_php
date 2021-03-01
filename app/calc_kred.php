@@ -7,7 +7,7 @@ require_once dirname(__FILE__).'/../config.php';
 $kwota = $_REQUEST ['kwota'];
 $lat = $_REQUEST ['lat'];
 $oprc = $_REQUEST ['oprc'];
-
+//test
 // Sprawdzenie, czy parametry zostały przekazane
 if ( !(isset($kwota) && isset($lat) && isset($oprc))) {
 	//sytuacja wystąpi kiedy np. kontroler zostanie wywołany bezpośrednio - nie z formularza
