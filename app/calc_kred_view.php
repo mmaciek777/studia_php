@@ -17,7 +17,6 @@
 </form>	
 
 <?php
-//test
 //wyświeltenie listy błędów, jeśli istnieją
 if (isset($messages)) {
 		echo '<ol style="margin: 20px; padding: 10px 10px 10px 30px; border-radius: 5px; background-color: #f88; width:300px;">';
