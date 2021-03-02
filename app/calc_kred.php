@@ -30,15 +30,15 @@ if (empty( $messages )) {
 	
 	
 	if (! is_numeric( $kwota )) {
-		$messages [] = 'Pierwsza wartość nie jest liczbą całkowitą';
+		$messages [] = 'Podana kwota nie jest liczbą całkowitą!';
 	}
 	
 	if (! is_numeric( $lat )) {
-		$messages [] = 'Druga wartość nie jest liczbą całkowitą';
+		$messages [] = 'Ilosc lat nie jest liczbą całkowitą!';
 	}
 
 	if (! is_numeric( $oprc )) {
-		$messages [] = 'Druga wartość nie jest liczbą całkowitą';
+		$messages [] = 'Oprocentowanie nie jest poprawne!';
 	}	
 
 }
@@ -46,16 +46,16 @@ if (empty( $messages )) {
 if (empty ( $messages )) { // gdy brak błędów
 	
 	//konwersja na int
-	$kwota = intval($kwota);
+	$kwota = floatval($kwota);
 	$lat = intval($lat);
-	$oprc = intval($oprc);
+	$oprc = floatval($oprc);
 
-	//wykonanie operacji
+	//wykonanie obliczeń
 	$msc_rata = ($kwota/($lat*12))+($kwota/($lat*12)*($oprc/100));
+	$msc_rata = round($msc_rata,2);
 }
-	$msc_przyb = round($msc_rata,2);
-
+	
 //   Wywołanie widoku z przekazaniem zmiennych
-// - zainicjowane zmienne ($messages,$kwota,$lat,$oprc,$msc_przyb)
+// - zainicjowane zmienne ($messages,$kwota,$lat,$oprc,$msc_rata)
 
 include 'calc_kred_view.php';

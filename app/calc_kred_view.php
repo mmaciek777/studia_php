@@ -5,15 +5,15 @@
 <title>Kalkulator</title>
 </head>
 <body>
-
+<h2>Kalkulator kredytowy</h2>
 <form action="<?php print(_APP_URL);?>/app/calc_kred.php" method="get">
-	<label for="id_x">Podaj kwotę: </label>
+	<label for="id_x">Podaj kwotę: </label><br/>
 	<input id="id_kwota" type="text" name="kwota" value="<?php if(isset($kwota)) print($kwota); ?>" /><br/>
-	<label for="id_y">Podaj ile lat: </label>
+	<label for="id_y">Podaj ile lat: </label><br/>
 	<input id="id_lat" type="text" name="lat" value="<?php if(isset($lat)) print($lat); ?>" /><br/>
-	<label for="id_z">Podaj oprocentowanie: </label>
-	<input id="id_oprc" type="text" name="oprc" value="<?php if(isset($oprc)) print($oprc); ?>" /><br/>
-	<input type="submit" value="Oblicz" />
+	<label for="id_z">Podaj oprocentowanie: </label><br/>
+	<input id="id_oprc" type="text" name="oprc" value="<?php if(isset($oprc)) print($oprc); ?>" /><br/><br/>
+	<input type="submit" value="OBLICZ" />
 </form>	
 
 <?php
@@ -27,9 +27,9 @@ if (isset($messages)) {
 	}
 ?>
 
-<?php if (isset($msc_przyb)){ ?>
+<?php if (isset($msc_rata)){ ?>
 <div style="margin: 20px; padding: 10px; border-radius: 5px; background-color: #ff0; width:300px;">
-<?php echo 'Miesieczna rata wynosi: '.$msc_przyb.' zl'; ?>
+<?php echo 'Miesieczna rata wynosi: '.$msc_rata.' zl'; ?>
 </div>
 <?php } ?>
 
