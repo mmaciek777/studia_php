@@ -7,11 +7,18 @@
 </head>
 <body>
 
-<div style="width:90%; margin: 2em auto;">
+    <div style="width:90%; margin:2em auto;" >
 	<a href="<?php print(_APP_ROOT); ?>/app/con_binar.php" class="pure-button">Konwerter binarny</a>
-	<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php" class="pure-button pure-button-active">Wyloguj</a>
+	<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php" class="pure-button pure-button-active pure-u-3-8 ">Wyloguj</a>
 </div>
-
+    <style>
+            .pure-u-3-8{
+                float:right;
+                text-align:right;
+                margin: auto;
+                width: auto;
+            }
+    </style>
 
 <div style="width:90%; margin: 2em auto;">
 
@@ -30,19 +37,21 @@
 //wyświeltenie listy błędów, jeśli istnieją
 if (isset($messages)) {
 		if (count ( $messages ) > 0) {
-		echo '<ol style="margin-top: 1em; padding: 1em 1em 1em 2em; border-radius: 0.5em; background-color: #f88; width:25em;">';
+		echo '<ul style="margin-top: 1em; padding: 1em 1em 1em 2em; border-radius: 0.5em; background-color: #f88; width:25em;">';
 		foreach ( $messages as $key => $msg ) {
 			echo '<li>'.$msg.'</li>';
 		}
-		echo '</ol>';
+		echo '</ul>';
 	}
 	}
 ?>
 
 <?php if (isset($msc_rata)){ ?>
-<div style="margin: 20px; padding: 10px; border-radius: 5px; background-color: #ff0; width:300px;">
+<div style="margin: 20px; padding: 10px; border-radius: 5px; background-color: #a0a0a0; width:300px;">
+    <fieldset><legend style="font-weight: bold; background: black; color: white; text-align: center; padding: 3px 20px; margin-bottom: 6px; font-family: Tahoma;" >Wynik</legend>
 <?php echo 'Miesieczna rata wynosi: '.$msc_rata.' zl'; ?></br>
-<?php echo 'Za cały kredyt zapłacisz: '.$msc_rata*($lat*12).' zl'; ?>
+<?php echo 'Cały kredyt wyniesie: '.$msc_rata*($lat*12).' zl'; ?>
+        </fieldset>
 </div>
 <?php } ?>
 
