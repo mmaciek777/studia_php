@@ -50,7 +50,7 @@
 					
 				</div>
                          <!-- Two -->
-				<div id="two" class="content_con" >
+				<div id="two" class="content_2" >
 					
 					{block name=content_con} Domyślna treść zawartości .... {/block}
 					

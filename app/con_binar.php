@@ -5,17 +5,17 @@ require_once dirname(__FILE__).'/../config.php';
 require_once _ROOT_PATH.'/lib/smarty/Smarty.class.php';
 
 
-function getParams(&$form){
+function getParams_binar(&$form){
 	$form['binarny'] = isset($_REQUEST['binarny']) ? $_REQUEST['binarny'] : null;
 	
 }
 
-function validate(&$form,&$infos,&$msgs){
+function validate_binar(&$form,&$infos,&$msgs){
 
 	if ( ! (isset($form['binarny'])))	return false;	
 	
 
-	$infos [] = 'Przekazano parametry.';
+	$infos [] = 'Przekazano liczbę.';
 
 	if ( $form['binarny'] == "") $msgs [] = 'Nie podano liczby!';
 	
@@ -29,8 +29,8 @@ function validate(&$form,&$infos,&$msgs){
 	else return true;
 }
 	
-function process(&$form,&$infos,&$msgs,&$result){
-	$infos [] = 'Wartości poprawne. Przeliczam ratę.';
+function process_binar(&$form,&$infos,&$msgs,&$result){
+	$infos [] = 'Wartość poprawna. Konwertuje liczbę.';
 	
 	
 	$result = decbin(( $form['binarny'] ));
@@ -42,9 +42,9 @@ $messages = array();
 $result = null;
 
 	
-getParams($form);
-if ( validate($form,$infos,$messages) ){
-	process($form,$infos,$messages,$result);
+getParams_binar($form);
+if ( validate_binar($form,$infos,$messages) ){
+	process_binar($form,$infos,$messages,$result);
 }
 
 // SMARTY
@@ -53,8 +53,8 @@ $smarty = new Smarty();
 
 $smarty->assign('app_url',_APP_URL);
 $smarty->assign('root_path',_ROOT_PATH);
-$smarty->assign('page_title','Matematyczna Strona');
-$smarty->assign('page_header','Oto strona, na której wyliczysz swój kredyt!');
+$smarty->assign('page_title','Kalkulator | Konwenter');
+$smarty->assign('page_header','Oto strona, na której wyliczysz swój kredyt oraz przekonwertujesz liczbę!');
 
 $smarty->assign('form',$form);
 $smarty->assign('result',$result);

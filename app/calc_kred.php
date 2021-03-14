@@ -66,7 +66,7 @@ $smarty = new Smarty();
 $smarty->assign('app_url',_APP_URL);
 $smarty->assign('root_path',_ROOT_PATH);
 $smarty->assign('page_title','Kalkulator | Konwenter');
-$smarty->assign('page_header','Oto strona, na której wyliczysz swój kredyt!');
+$smarty->assign('page_header','Oto strona, na której wyliczysz swój kredyt oraz przekonwertujesz liczbę!');
 
 $smarty->assign('form',$form);
 $smarty->assign('result',$result);
