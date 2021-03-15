@@ -21,11 +21,11 @@
 			<!-- Header -->
 				<header id="header" >
 					
-					<h1 id="logo"><a href="#"><img src="{$app_url}/images/sztuczna_logo.png"></img><a/></h1>
+					<h1 id="logo"><a href="{$app_url}"><img src="{$app_url}/images/sztuczna_logo.png"></img><a/></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="#one" class="button primary scrolly" >Kalkulator</a></li>
-                                                        <li><a href="#two" class="button primary scrolly" >Konwerter binarny</a></li>
+							<li><a href="{$app_url}/app/calc_kred.php#one" class="button primary" >Kalkulator</a></li>
+                                                        <li><a href="{$app_url}/app/con_binar.php#one" class="button primary" >Konwerter</a></li>
 						</ul>
 					</nav>
 				
@@ -49,14 +49,8 @@
 					{block name=content} Domyślna treść zawartości .... {/block}
 					
 				</div>
-                         <!-- Two -->
-				<div id="two" class="content_2" >
-					
-					{block name=content_con} Domyślna treść zawartości .... {/block}
-					
-				</div>               
-                             
-			<!-- Footer -->
+                                        
+                        <!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
 						<li><a href="https://twitter.com" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>

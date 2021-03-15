@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-03-14 23:30:19
+/* Smarty version 3.1.39, created on 2021-03-15 10:45:40
   from 'C:\xampp\htdocs\test2\szablon\home.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_604e8e7b9b1445_65882213',
+  'unifunc' => 'content_604f2cc472b271_52171711',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9391bfeda6c4361e11f871697e461b901f543675' => 
     array (
       0 => 'C:\\xampp\\htdocs\\test2\\szablon\\home.tpl',
-      1 => 1615761012,
+      1 => 1615801358,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_604e8e7b9b1445_65882213 (Smarty_Internal_Template $_smarty_tpl) {
+function content_604f2cc472b271_52171711 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -51,12 +51,15 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 			<!-- Header -->
 				<header id="header" >
 					
-					<h1 id="logo"><a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+					<h1 id="logo"><a href="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+"><img src="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
 /images/sztuczna_logo.png"></img><a/></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="#one" class="button primary scrolly" >Kalkulator</a></li>
-                                                        <li><a href="#two" class="button primary scrolly" >Konwerter binarny</a></li>
+							<li><a href="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+/app/calc_kred.php#one" class="button primary" >Kalkulator</a></li>
+                                                        <li><a href="<?php echo $_smarty_tpl->tpl_vars['app_url']->value;?>
+/app/con_binar.php#one" class="button primary" >Konwerter</a></li>
 						</ul>
 					</nav>
 				
@@ -80,22 +83,13 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 				<div id="one" class="content" >
 					
 					<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_322182327604e8e7b9af826_12946343', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2041967096604f2cc4729e33_89560677', 'content');
 ?>
 
 					
 				</div>
-                         <!-- Two -->
-				<div id="two" class="content_2" >
-					
-					<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2019986409604e8e7b9b0157_75338083', 'content_con');
-?>
-
-					
-				</div>               
-                             
-			<!-- Footer -->
+                                        
+                        <!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
 						<li><a href="https://twitter.com" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
@@ -148,12 +142,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2019986409604e8e7b
 	</body>
 </html><?php }
 /* {block 'content'} */
-class Block_322182327604e8e7b9af826_12946343 extends Smarty_Internal_Block
+class Block_2041967096604f2cc4729e33_89560677 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_322182327604e8e7b9af826_12946343',
+    0 => 'Block_2041967096604f2cc4729e33_89560677',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -162,19 +156,4 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 }
 /* {/block 'content'} */
-/* {block 'content_con'} */
-class Block_2019986409604e8e7b9b0157_75338083 extends Smarty_Internal_Block
-{
-public $subBlocks = array (
-  'content_con' => 
-  array (
-    0 => 'Block_2019986409604e8e7b9b0157_75338083',
-  ),
-);
-public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
-?>
- Domyślna treść zawartości .... <?php
-}
-}
-/* {/block 'content_con'} */
 }
